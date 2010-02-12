@@ -66,7 +66,6 @@ Cory G Watson, C<< <gphat at cpan.org> >>
 
 =head1 ACKNOWLEDGEMENTS
 
-
 =head1 COPYRIGHT & LICENSE
 
 Copyright 2010 Cory G Watson.
@@ -78,5 +77,3 @@ by the Free Software Foundation; or the Artistic License.
 See http://dev.perl.org/licenses/ for more information.
 
 =cut
-
-1; # End of Geo::Address::Mail
