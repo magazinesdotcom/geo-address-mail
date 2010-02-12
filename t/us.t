@@ -20,4 +20,8 @@ my $addr = Geo::Address::Mail::US->new(
 );
 cmp_ok($addr->street2, 'eq', 'Apt 1B', 'street2');
 
+lives_ok(sub {
+    my $new_addr = $addr->clone;
+}, 'cloning');
+
 done_testing;

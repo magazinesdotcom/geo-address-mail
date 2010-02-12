@@ -3,6 +3,8 @@ use warnings;
 use strict;
 use Moose;
 
+with qw(MooseX::Clone);
+
 our $VERSION = '0.01';
 
 has 'city' => (

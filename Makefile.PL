@@ -9,6 +9,7 @@ build_requires 'Test::More';
 build_requires 'Test::Exception';
 
 requires 'Moose';
+requires 'MooseX::Clone';
 requires 'MooseX::Types';
 requires 'Regexp::Common';
 

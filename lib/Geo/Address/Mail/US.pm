@@ -21,6 +21,11 @@ has 'street2' => (
     isa => 'Str'
 );
 
+has 'state' => (
+    is => 'rw',
+    isa => 'Str'
+);
+
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
@@ -59,6 +64,11 @@ standard.
 
 Addresses in the United States often have an Apartment number, Suite number
 or other sub-street unit.  This field provides for that.
+
+=head2 state
+
+The state for this address. Added in US as not all countries have the
+concept of a state.
 
 =head1 AUTHOR
 
