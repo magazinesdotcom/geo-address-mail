@@ -12,9 +12,13 @@ subtype 'Geo::Address::Mail::USPostalCode',
     => as 'Str',
     => where { $_ =~ /^$RE{zip}{US}$/ };
 
-
 has '+postal_code' => (
     isa => 'Geo::Address::Mail::USPostalCode'
+);
+
+has 'street2' => (
+    is => 'rw',
+    isa => 'Str'
 );
 
 __PACKAGE__->meta->make_immutable;
@@ -27,14 +31,34 @@ Geo::Address::Mail::US - A Mailing Address in the United States
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
+Geo::Address::Mail::US is a subclass of L<Geo::Address::Mail> that provides
+specific validation and attributes for mailing addresses located in the United
+States.
 
-Perhaps a little code snippet.
+    use Geo::Address::Mail::US;
 
-    use Geo::Address::Mail;
+    my $add = Geo::Address::Mail::US->new(
+        name => 'Cory G Watson',
+        street => '123 Main St',
+        street2 => 'Apt 3B',
+        city => 'Testville',
+        postal_code => '12345'
+    );
 
-    my $foo = Geo::Address::Mail->new();
-    ...
+=head1 ATTRIBUTES
+
+Geo::Address::Mail::US has all the attributes of L<Geo::Address::Mail>.  The
+following attributes are either modified or new.
+
+=head2 postal_code
+
+Postal codes are validated to conform to the USPS ZIP (and optional +4)
+standard.
+
+=head2 street2
+
+Addresses in the United States often have an Apartment number, Suite number
+or other sub-street unit.  This field provides for that.
 
 =head1 AUTHOR
 
