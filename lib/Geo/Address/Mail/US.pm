@@ -2,6 +2,8 @@ package Geo::Address::Mail::US;
 use warnings;
 use strict;
 use Moose;
+use MooseX::Storage;
+with qw(MooseX::Storage::Deferred);
 
 use Moose::Util::TypeConstraints;
 use Regexp::Common qw(zip);

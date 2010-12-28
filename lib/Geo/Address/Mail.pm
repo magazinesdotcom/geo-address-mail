@@ -2,10 +2,11 @@ package Geo::Address::Mail;
 use warnings;
 use strict;
 use Moose;
-
+use MooseX::Storage;
+with qw(MooseX::Storage::Deferred);
 with qw(MooseX::Clone);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has 'city' => (
     is => 'rw',
