@@ -1,5 +1,8 @@
 Revision history for Geo-Address-Mail
 
+0.03    Mon Jan 3, 2010
+  * Add MooseX::Storage depency (thanks Andreas Koenig)
+
 0.02    Tue Dec 28, 2010
   * Add MooseX::Storage (holophrastic)
 

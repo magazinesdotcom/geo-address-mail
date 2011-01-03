@@ -6,7 +6,7 @@ use MooseX::Storage;
 with qw(MooseX::Storage::Deferred);
 with qw(MooseX::Clone);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has 'city' => (
     is => 'rw',

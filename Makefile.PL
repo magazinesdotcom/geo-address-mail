@@ -10,6 +10,7 @@ build_requires 'Test::Exception';
 
 requires 'Moose';
 requires 'MooseX::Clone';
+requires 'MooseX::Storage';
 requires 'MooseX::Types';
 requires 'Regexp::Common';
 
